@@ -1,0 +1,17 @@
+# GitHub Pages Configuration
+# This file is optional for static HTML sites but can be useful for configuration
+
+# Site settings
+title: SciEmp - Science & Innovation
+description: Empowering Scientific Innovation through cutting-edge technology and collaboration
+author: SciEmp Team
+
+# Build settings
+markdown: kramdown
+
+# Exclude files from the build
+exclude:
+  - README.md
+  - .gitignore
+  - .DS_Store
+
