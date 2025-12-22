@@ -1,6 +1,6 @@
-# SciEmp - Science & Innovation Website
+# Scientific Emporium - Quality Scientific Equipment
 
-A modern, responsive static website built for GitHub Pages featuring a beautiful landing page and contact section.
+A modern, responsive static website built for GitHub Pages featuring a beautiful landing page and contact section for Scientific Emporium, your trusted partner for laboratory equipment.
 
 ## 🚀 Features
 

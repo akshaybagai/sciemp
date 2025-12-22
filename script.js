@@ -49,72 +49,7 @@ document.querySelectorAll('a[href^="#"]').forEach(anchor => {
     });
 });
 
-// Form submission handling
-const contactForm = document.getElementById('contactForm');
-const formStatus = document.getElementById('formStatus');
-
-contactForm.addEventListener('submit', async (e) => {
-    e.preventDefault();
-    
-    // Get form data
-    const formData = {
-        name: document.getElementById('name').value,
-        email: document.getElementById('email').value,
-        subject: document.getElementById('subject').value,
-        message: document.getElementById('message').value
-    };
-    
-    // Show loading state
-    const submitButton = contactForm.querySelector('button[type="submit"]');
-    const originalButtonText = submitButton.textContent;
-    submitButton.textContent = 'Sending...';
-    submitButton.disabled = true;
-    
-    // Simulate form submission (since this is a static site)
-    // In a real application, you would send this data to a backend server
-    try {
-        // Simulate API call delay
-        await new Promise(resolve => setTimeout(resolve, 1500));
-        
-        // For demonstration purposes, we'll show success
-        // In production, you would integrate with a service like Formspree, EmailJS, or your own backend
-        
-        formStatus.textContent = `Thank you, ${formData.name}! Your message has been received. We'll get back to you soon.`;
-        formStatus.className = 'form-status success';
-        
-        // Reset form
-        contactForm.reset();
-        
-        // Hide success message after 5 seconds
-        setTimeout(() => {
-            formStatus.className = 'form-status';
-        }, 5000);
-        
-    } catch (error) {
-        formStatus.textContent = 'Oops! Something went wrong. Please try again later.';
-        formStatus.className = 'form-status error';
-        
-        // Hide error message after 5 seconds
-        setTimeout(() => {
-            formStatus.className = 'form-status';
-        }, 5000);
-    } finally {
-        // Reset button state
-        submitButton.textContent = originalButtonText;
-        submitButton.disabled = false;
-    }
-});
-
-// Form validation - real-time feedback
-const emailInput = document.getElementById('email');
-emailInput.addEventListener('blur', () => {
-    const emailPattern = /^[^\s@]+@[^\s@]+\.[^\s@]+$/;
-    if (emailInput.value && !emailPattern.test(emailInput.value)) {
-        emailInput.style.borderColor = 'var(--error-color)';
-    } else {
-        emailInput.style.borderColor = 'var(--border-color)';
-    }
-});
+// Contact section - no form needed, using mailto links
 
 // Intersection Observer for fade-in animations
 const observerOptions = {

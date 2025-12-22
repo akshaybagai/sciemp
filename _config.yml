@@ -2,9 +2,9 @@
 # This file is optional for static HTML sites but can be useful for configuration
 
 # Site settings
-title: SciEmp - Science & Innovation
-description: Empowering Scientific Innovation through cutting-edge technology and collaboration
-author: SciEmp Team
+title: Scientific Emporium - Quality Scientific Equipment
+description: Quality scientific instruments and laboratory equipment for research, education, and industry
+author: Scientific Emporium
 
 # Build settings
 markdown: kramdown
