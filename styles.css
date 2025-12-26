@@ -1237,6 +1237,187 @@ body {
     }
 }
 
+/* COA Page Styles */
+.coa-page {
+    padding: 10rem 0 4rem;
+    background: var(--bg-light);
+    min-height: 100vh;
+}
+
+.coa-header {
+    text-align: center;
+    margin-bottom: 3rem;
+}
+
+.coa-header h1 {
+    font-size: 2.5rem;
+    color: var(--text-dark);
+    margin-bottom: 0.5rem;
+    font-weight: 700;
+}
+
+.coa-header p {
+    font-size: 1.1rem;
+    color: var(--text-light);
+}
+
+.coa-grid {
+    display: grid;
+    grid-template-columns: repeat(auto-fill, minmax(320px, 1fr));
+    gap: 2rem;
+    margin-bottom: 3rem;
+}
+
+.coa-tile {
+    background: white;
+    border-radius: 1rem;
+    overflow: hidden;
+    box-shadow: var(--shadow-md);
+    transition: all 0.3s ease;
+    text-decoration: none;
+    display: block;
+}
+
+.coa-tile:hover {
+    transform: translateY(-8px);
+    box-shadow: var(--shadow-xl);
+}
+
+.coa-tile-content {
+    padding: 2rem;
+}
+
+.coa-logo {
+    width: 100%;
+    height: 120px;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    margin-bottom: 1.5rem;
+    background: linear-gradient(135deg, #f8fafc 0%, #e8edf5 100%);
+    border-radius: 0.5rem;
+}
+
+.coa-logo-placeholder {
+    text-align: center;
+    color: var(--primary-color);
+    font-weight: 600;
+    font-size: 1.25rem;
+    padding: 1rem;
+}
+
+.coa-logo img {
+    max-width: 80%;
+    max-height: 80px;
+    object-fit: contain;
+}
+
+.coa-tile h3 {
+    font-size: 1.5rem;
+    color: var(--text-dark);
+    margin-bottom: 0.75rem;
+    font-weight: 600;
+}
+
+.coa-tile p {
+    color: var(--text-light);
+    font-size: 1rem;
+    line-height: 1.6;
+    margin-bottom: 1.5rem;
+}
+
+.coa-link {
+    display: flex;
+    align-items: center;
+    gap: 0.5rem;
+    color: var(--primary-color);
+    font-weight: 600;
+    font-size: 1rem;
+}
+
+.coa-link svg {
+    transition: transform 0.3s ease;
+}
+
+.coa-tile:hover .coa-link svg {
+    transform: translateX(5px);
+}
+
+.coa-info {
+    max-width: 900px;
+    margin: 4rem auto 0;
+    display: grid;
+    grid-template-columns: repeat(auto-fit, minmax(300px, 1fr));
+    gap: 2rem;
+}
+
+.info-box {
+    background: white;
+    padding: 2rem;
+    border-radius: 1rem;
+    box-shadow: var(--shadow-md);
+    display: flex;
+    gap: 1.5rem;
+}
+
+.info-icon {
+    flex-shrink: 0;
+    width: 60px;
+    height: 60px;
+    background: linear-gradient(135deg, var(--primary-color), var(--secondary-color));
+    border-radius: 50%;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+}
+
+.info-icon svg {
+    color: white;
+}
+
+.info-box h4 {
+    font-size: 1.25rem;
+    color: var(--text-dark);
+    margin-bottom: 0.5rem;
+    font-weight: 600;
+}
+
+.info-box p {
+    color: var(--text-light);
+    line-height: 1.6;
+    font-size: 0.95rem;
+}
+
+/* Responsive for COA Page */
+@media (max-width: 768px) {
+    .coa-page {
+        padding: 9rem 0 3rem;
+    }
+
+    .coa-header h1 {
+        font-size: 2rem;
+    }
+
+    .coa-grid {
+        grid-template-columns: 1fr;
+        padding: 0 1rem;
+    }
+
+    .coa-info {
+        grid-template-columns: 1fr;
+        padding: 0 1rem;
+    }
+
+    .info-box {
+        flex-direction: column;
+        text-align: center;
+    }
+
+    .info-icon {
+        margin: 0 auto;
+    }
+}
+
 /* Certificates Page Styles */
 .certificates-page {
     padding: 10rem 0 4rem;
