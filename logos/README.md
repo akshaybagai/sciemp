@@ -97,3 +97,4 @@ For others, search: "[Company Name] official website logo"
 - Test logos on both light and dark backgrounds
 - Keep original files as backup before optimization
 
+
