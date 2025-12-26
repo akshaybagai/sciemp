@@ -1116,3 +1116,66 @@ body {
     }
 }
 
+/* About Page Styles */
+.about-page {
+    padding: 10rem 0 4rem;
+    background: white;
+}
+
+.about-page-content {
+    max-width: 900px;
+    margin: 0 auto;
+    padding: 0 2rem;
+}
+
+.about-page-content h1 {
+    font-size: 2.5rem;
+    color: var(--text-dark);
+    margin-bottom: 2rem;
+    text-align: center;
+    font-weight: 700;
+}
+
+.about-page-content h2 {
+    font-size: 1.5rem;
+    color: var(--primary-color);
+    margin-top: 2.5rem;
+    margin-bottom: 1rem;
+    font-weight: 600;
+}
+
+.about-page-content h2:first-of-type {
+    margin-top: 0;
+}
+
+.about-page-content p {
+    font-size: 1.05rem;
+    line-height: 1.8;
+    color: var(--text-light);
+    margin-bottom: 1.25rem;
+}
+
+/* About Page Responsive */
+@media (max-width: 768px) {
+    .about-page {
+        padding: 9rem 0 3rem;
+    }
+
+    .about-page-content {
+        padding: 0 1.5rem;
+    }
+
+    .about-page-content h1 {
+        font-size: 2rem;
+    }
+
+    .about-page-content h2 {
+        font-size: 1.25rem;
+        margin-top: 2rem;
+    }
+
+    .about-page-content p {
+        font-size: 1rem;
+    }
+}
+
