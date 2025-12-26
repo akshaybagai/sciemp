@@ -1237,6 +1237,253 @@ body {
     }
 }
 
+/* Certificates Page Styles */
+.certificates-page {
+    padding: 10rem 0 4rem;
+    background: var(--bg-light);
+    min-height: 100vh;
+}
+
+.certificates-header {
+    text-align: center;
+    margin-bottom: 3rem;
+}
+
+.certificates-header h1 {
+    font-size: 2.5rem;
+    color: var(--text-dark);
+    margin-bottom: 0.5rem;
+    font-weight: 700;
+}
+
+.certificates-header p {
+    font-size: 1.1rem;
+    color: var(--text-light);
+}
+
+.certificates-grid {
+    display: grid;
+    grid-template-columns: repeat(auto-fit, minmax(350px, 1fr));
+    gap: 2rem;
+    max-width: 1000px;
+    margin: 0 auto;
+}
+
+.certificate-card {
+    background: white;
+    border-radius: 1rem;
+    box-shadow: var(--shadow-lg);
+    overflow: hidden;
+    transition: all 0.3s ease;
+}
+
+.certificate-card:hover {
+    transform: translateY(-5px);
+    box-shadow: var(--shadow-xl);
+}
+
+.certificate-header {
+    padding: 1.5rem;
+    background: linear-gradient(135deg, var(--primary-color), var(--secondary-color));
+    color: white;
+    display: flex;
+    align-items: center;
+    gap: 1rem;
+}
+
+.certificate-icon {
+    width: 60px;
+    height: 60px;
+    background: rgba(255, 255, 255, 0.2);
+    border-radius: 50%;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    flex-shrink: 0;
+}
+
+.certificate-icon svg {
+    color: white;
+}
+
+.certificate-header h2 {
+    font-size: 1.5rem;
+    margin-bottom: 0.25rem;
+    font-weight: 600;
+}
+
+.certificate-meta {
+    font-size: 0.9rem;
+    opacity: 0.95;
+    margin: 0;
+}
+
+.certificate-preview {
+    padding: 2rem;
+    background: var(--bg-light);
+    min-height: 300px;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    cursor: pointer;
+    transition: all 0.3s ease;
+}
+
+.certificate-preview:hover {
+    background: #e8edf5;
+}
+
+.certificate-preview img {
+    max-width: 100%;
+    max-height: 400px;
+    object-fit: contain;
+    border-radius: 0.5rem;
+    box-shadow: var(--shadow-md);
+}
+
+.pdf-preview {
+    background: linear-gradient(135deg, #f8fafc 0%, #e8edf5 100%);
+}
+
+.pdf-icon {
+    text-align: center;
+    color: var(--primary-color);
+}
+
+.pdf-icon svg {
+    margin-bottom: 1rem;
+}
+
+.pdf-icon p {
+    font-size: 1rem;
+    font-weight: 600;
+    color: var(--text-dark);
+}
+
+.certificate-actions {
+    padding: 1.5rem;
+    display: flex;
+    justify-content: center;
+    border-top: 1px solid var(--border-color);
+}
+
+.certificate-actions .btn {
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    gap: 0.5rem;
+    padding: 0.75rem 2rem;
+}
+
+.certificate-actions .btn svg {
+    flex-shrink: 0;
+}
+
+/* Modal for Certificate Viewing */
+.modal {
+    display: none;
+    position: fixed;
+    z-index: 10000;
+    left: 0;
+    top: 0;
+    width: 100%;
+    height: 100%;
+    background-color: rgba(0, 0, 0, 0.9);
+    animation: fadeIn 0.3s ease;
+}
+
+@keyframes fadeIn {
+    from { opacity: 0; }
+    to { opacity: 1; }
+}
+
+.modal-content {
+    position: relative;
+    margin: 2% auto;
+    padding: 0;
+    width: 90%;
+    max-width: 1200px;
+    background: white;
+    border-radius: 0.5rem;
+    animation: slideIn 0.3s ease;
+}
+
+@keyframes slideIn {
+    from {
+        transform: translateY(-50px);
+        opacity: 0;
+    }
+    to {
+        transform: translateY(0);
+        opacity: 1;
+    }
+}
+
+.modal-close {
+    position: absolute;
+    top: -40px;
+    right: 0;
+    color: white;
+    font-size: 40px;
+    font-weight: bold;
+    cursor: pointer;
+    transition: all 0.3s ease;
+    z-index: 10001;
+}
+
+.modal-close:hover {
+    transform: scale(1.2);
+}
+
+#modalBody {
+    padding: 2rem;
+}
+
+#modalBody img {
+    width: 100%;
+    height: auto;
+    display: block;
+}
+
+/* Responsive for Certificates Page */
+@media (max-width: 768px) {
+    .certificates-page {
+        padding: 9rem 0 3rem;
+    }
+
+    .certificates-header h1 {
+        font-size: 2rem;
+    }
+
+    .certificates-grid {
+        grid-template-columns: 1fr;
+        padding: 0 1rem;
+    }
+
+    .certificate-actions .btn {
+        width: 100%;
+    }
+
+    .certificate-preview {
+        min-height: 200px;
+        padding: 1rem;
+    }
+
+    .modal-content {
+        width: 95%;
+        margin: 5% auto;
+    }
+
+    #modalBody {
+        padding: 1rem;
+    }
+
+    .modal-close {
+        top: -35px;
+        font-size: 30px;
+    }
+}
+
 /* About Page Styles */
 .about-page {
     padding: 10rem 0 4rem;
