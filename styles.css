@@ -40,16 +40,69 @@ body {
     padding: 0 20px;
 }
 
+/* Top Header Bar */
+.top-header {
+    background: var(--primary-color);
+    color: white;
+    padding: 0.5rem 0;
+    font-size: 0.875rem;
+    position: sticky;
+    top: 0;
+    z-index: 1100;
+}
+
+.top-header-content {
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    gap: 2rem;
+    flex-wrap: wrap;
+}
+
+.top-header-item {
+    display: flex;
+    align-items: center;
+    gap: 0.5rem;
+}
+
+.top-header-item svg {
+    flex-shrink: 0;
+    opacity: 0.9;
+}
+
+.top-header-item span,
+.top-header-item a {
+    color: white;
+    text-decoration: none;
+    opacity: 0.95;
+}
+
+.top-header-item a:hover {
+    opacity: 1;
+    text-decoration: underline;
+}
+
+.whatsapp-header {
+    background: #25D366;
+    padding: 0.25rem 0.75rem;
+    border-radius: 0.25rem;
+    transition: all 0.3s ease;
+}
+
+.whatsapp-header:hover {
+    background: #128C7E;
+    transform: translateY(-1px);
+}
+
 /* Navigation */
 .navbar {
-    position: fixed;
+    position: sticky;
     top: 0;
     left: 0;
     right: 0;
-    background: rgba(255, 255, 255, 0.95);
-    backdrop-filter: blur(10px);
+    background: white;
     box-shadow: var(--shadow-sm);
-    z-index: 1000;
+    z-index: 1099;
     transition: all 0.3s ease;
 }
 
@@ -150,7 +203,8 @@ body {
     background: linear-gradient(135deg, #dbeafe 0%, #fee2e2 100%);
     position: relative;
     overflow: hidden;
-    margin-top: 72px;
+    margin-top: 0;
+    z-index: 1;
 }
 
 .hero::before {
@@ -757,17 +811,32 @@ body {
         font-size: 2.5rem;
     }
 
+    .top-header-content {
+        flex-direction: column;
+        gap: 0.5rem;
+        align-items: flex-start;
+    }
+
+    .top-header-item {
+        font-size: 0.75rem;
+    }
+
+    .navbar {
+        position: sticky;
+    }
+
     .nav-links {
         position: fixed;
-        top: 72px;
+        top: 0;
         left: -100%;
         width: 100%;
-        height: calc(100vh - 72px);
+        height: 100vh;
         background: white;
         flex-direction: column;
         padding: 2rem;
         transition: left 0.3s ease;
         box-shadow: var(--shadow-lg);
+        z-index: 1002;
     }
 
     .nav-links.active {
