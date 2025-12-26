@@ -98,6 +98,97 @@ window.addEventListener('scroll', () => {
     });
 });
 
+// Hero Gallery Carousel
+const initGallery = () => {
+    const slides = document.querySelectorAll('.gallery-slide');
+    const dots = document.querySelectorAll('.dot');
+    const prevBtn = document.querySelector('.gallery-btn-prev');
+    const nextBtn = document.querySelector('.gallery-btn-next');
+    
+    if (!slides.length) return; // Exit if no gallery exists
+    
+    let currentSlide = 0;
+    const totalSlides = slides.length;
+    
+    // Show specific slide
+    const showSlide = (n) => {
+        slides.forEach(slide => slide.classList.remove('active'));
+        dots.forEach(dot => dot.classList.remove('active'));
+        
+        currentSlide = (n + totalSlides) % totalSlides;
+        
+        slides[currentSlide].classList.add('active');
+        dots[currentSlide].classList.add('active');
+    };
+    
+    // Next slide
+    const nextSlide = () => {
+        showSlide(currentSlide + 1);
+    };
+    
+    // Previous slide
+    const prevSlide = () => {
+        showSlide(currentSlide - 1);
+    };
+    
+    // Event listeners for buttons
+    if (nextBtn) nextBtn.addEventListener('click', nextSlide);
+    if (prevBtn) prevBtn.addEventListener('click', prevSlide);
+    
+    // Event listeners for dots
+    dots.forEach((dot, index) => {
+        dot.addEventListener('click', () => showSlide(index));
+    });
+    
+    // Auto-advance slides every 5 seconds
+    let autoSlide = setInterval(nextSlide, 5000);
+    
+    // Pause auto-advance on hover
+    const galleryContainer = document.querySelector('.gallery-container');
+    if (galleryContainer) {
+        galleryContainer.addEventListener('mouseenter', () => {
+            clearInterval(autoSlide);
+        });
+        
+        galleryContainer.addEventListener('mouseleave', () => {
+            autoSlide = setInterval(nextSlide, 5000);
+        });
+    }
+    
+    // Keyboard navigation
+    document.addEventListener('keydown', (e) => {
+        if (e.key === 'ArrowLeft') prevSlide();
+        if (e.key === 'ArrowRight') nextSlide();
+    });
+    
+    // Touch/swipe support for mobile
+    let touchStartX = 0;
+    let touchEndX = 0;
+    
+    if (galleryContainer) {
+        galleryContainer.addEventListener('touchstart', (e) => {
+            touchStartX = e.changedTouches[0].screenX;
+        });
+        
+        galleryContainer.addEventListener('touchend', (e) => {
+            touchEndX = e.changedTouches[0].screenX;
+            handleSwipe();
+        });
+    }
+    
+    const handleSwipe = () => {
+        if (touchEndX < touchStartX - 50) nextSlide(); // Swipe left
+        if (touchEndX > touchStartX + 50) prevSlide(); // Swipe right
+    };
+};
+
+// Initialize gallery when DOM is loaded
+if (document.readyState === 'loading') {
+    document.addEventListener('DOMContentLoaded', initGallery);
+} else {
+    initGallery();
+}
+
 // Console message for developers
 console.log('%c🚀 SciEmp Website', 'color: #6366f1; font-size: 20px; font-weight: bold;');
 console.log('%cBuilt with ❤️ for GitHub Pages', 'color: #8b5cf6; font-size: 14px;');
