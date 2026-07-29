@@ -661,6 +661,8 @@ body {
     align-items: center;
     justify-content: center;
     min-height: 140px;
+    text-decoration: none;
+    color: inherit;
     transition: all 0.3s ease;
     cursor: pointer;
 }

@@ -29,8 +29,15 @@ Save logos in this folder with descriptive names:
 - `rapid.png`
 - `immunoscience.png`
 - `calbiotech.png`
-- `sdbiosensor.png`
+- `sd-biosensor.png`
 - `bluestar.png`
+- `zeiss.webp`
+- `eva-cooling.webp`
+- `idilia.svg`
+- `romerlabs.svg`
+- `genetix.png`
+- `bd.png`
+- `roche.webp`
 
 ### Step 3: Update HTML
 Replace the text in each partner card with an image tag.
@@ -85,7 +92,14 @@ Use these to find official logos:
 4. **Hi-Media**: https://www.himedialabs.com/
 5. **J.Mitra & Co**: https://www.jmitra.co.in/
 6. **ARKRAY Healthcare**: https://www.arkray.co.in/
-7. **SD Biosensor**: https://www.sdbiosensor.com/
+7. **SD Biosensor**: https://sdbiosensor.co.in/
+8. **ZEISS**: https://www.zeiss.co.in/microscopy/home.html
+9. **Eva Cooling**: https://eva-cooling.com/
+10. **Idilia Foods**: https://idiliafoods.com/
+11. **Romer Labs**: https://www.romerlabs.com/
+12. **Genetix**: https://genetixbiotech.com/
+13. **BD**: https://eifu.bd.com/
+14. **Roche**: https://www.rocheindia.com/
 
 For others, search: "[Company Name] official website logo"
 
@@ -96,5 +110,6 @@ For others, search: "[Company Name] official website logo"
 - Use transparent backgrounds when possible
 - Test logos on both light and dark backgrounds
 - Keep original files as backup before optimization
+
 
 
